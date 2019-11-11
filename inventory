@@ -1,5 +1,5 @@
 [juniper]
-172.16.203.121
+52.210.17.183 
 
 [juniper:vars]
 ansible_user=ec2-user
