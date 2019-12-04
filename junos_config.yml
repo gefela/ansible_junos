@@ -13,3 +13,11 @@
     junos_config:
       src: files/admin_user
       comment: admin user config
+  - name: NTP check 
+    junos_config:
+      src: files/ntp 
+      comment: correct NTP server 
+      - name: idle timeout check 
+    junos_config:
+      src: files/idle timeout
+      comment: idle timeout confirmed 
