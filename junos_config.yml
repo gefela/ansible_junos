@@ -19,7 +19,7 @@
       src: files/NTP server
       comment: correct NTP server 
       
-      - name: idle timeout check 
+  - name: idle timeout check 
     junos_config:
       src: files/idle timeout
       comment: idle timeout confirmed 
