@@ -7,12 +7,12 @@
   - name: load syslog configuration
     junos_config:
       src: files/syslog_config
-      comment: syslog config
+      comment: Appropriate Syslog server configured 
 
   - name: Admin credentials 
     junos_config:
       src: files/admin_user
-      comment: admin user config
+      comment: admin user created and confirmed 
       
   - name: NTP check 
     junos_config:
@@ -23,3 +23,13 @@
     junos_config:
       src: files/idle timeout
       comment: idle timeout confirmed 
+  
+  - name: SSH V2 check 
+    junos_config:
+      src: files/SSH V2 check 
+      comment: SSH V2 protocol correctly configured
+  
+  - name: AAA check 
+    junos_config:
+      src: files/AAA check 
+      comment: Appropriate AAA server configured and confirmed 
