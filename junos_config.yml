@@ -31,5 +31,5 @@
   
   - name: AAA check 
     junos_config:
-      src: files/AAA check 
+      src: files/AAA server check 
       comment: Appropriate AAA server configured and confirmed 
