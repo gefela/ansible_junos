@@ -24,11 +24,6 @@
       src: files/idle timeout
       comment: idle timeout confirmed 
   
-  - name: SSH V2 check 
-    junos_config:
-      src: files/SSH v2 check 
-      comment: SSH V2 protocol correctly configured
-  
   - name: AAA check 
     junos_config:
       src: files/AAA server check 
