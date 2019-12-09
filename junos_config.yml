@@ -4,7 +4,7 @@
   hosts: juniper
   gather_facts: false
   tasks:
-  - name: load syslog configuration
+  - name: Syslog server check
     junos_config:
       src: files/syslog_config
       comment: Appropriate Syslog server configured 
@@ -23,8 +23,3 @@
     junos_config:
       src: files/idle timeout
       comment: idle timeout confirmed 
-  
-  - name: AAA check 
-    junos_config:
-      src: files/AAA server check 
-      comment: Appropriate AAA server configured and confirmed 
