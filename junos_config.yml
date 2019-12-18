@@ -10,7 +10,7 @@
       comment: Appropriate Syslog server configured 
       
   - debug:
-      var: task
+      var: tasks
 
   - name: print success
     debug:
