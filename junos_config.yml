@@ -13,7 +13,7 @@
   - name: print success
     debug:
       msg: Syslog server check - OK
-    when: not {{ Syslog server check.changed }}
+    when: not {{ task.changed }}
 
   - name: print failed
     debug:
