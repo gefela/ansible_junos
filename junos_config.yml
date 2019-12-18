@@ -8,21 +8,30 @@
     junos_config:
       src: files/syslog_config
       comment: Appropriate Syslog server configured 
-      register: task
+      register: tasks
   - debug:
-      var: task
+      var: tasks
  
   - name: Admin credentials 
     junos_config:
       src: files/admin_user
       comment: admin user created and confirmed 
+      register: tasks
+  - debug:
+      var: tasks
       
   - name: NTP check 
     junos_config:
       src: files/NTP server
       comment: correct NTP server 
+         register: tasks
+  - debug:
+      var: tasks
       
   - name: idle timeout check 
     junos_config:
       src: files/idle timeout
       comment: idle timeout confirmed 
+      register: tasks
+  - debug:
+      var: tasks
