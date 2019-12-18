@@ -8,6 +8,9 @@
     junos_config:
       src: files/syslog_config
       comment: Appropriate Syslog server configured 
+  - debug:
+      var: task
+
   - name: print success
     debug:
       msg: Syslog server check - OK
