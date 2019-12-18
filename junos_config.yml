@@ -9,7 +9,7 @@
       src: files/syslog_config
       comment: Appropriate Syslog server configured     
   - debug:
-      var: Syslog server check
+      var: tasks
   - name: print success
     debug:
       msg: Syslog server check - OK
