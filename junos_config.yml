@@ -9,18 +9,9 @@
       src: files/syslog_config
       comment: Appropriate Syslog server configured 
       register: task
-      debug:
+  - debug:
       var: task
-  - name: print success
-    debug:
-      msg: syslog configuration - Passed
-    when: not {{ task.changed }}
-
-  - name: print failed
-    debug:
-      msg: syslog configuration - Failed
-    when: "{{ task.changed }}"
-
+ 
   - name: Admin credentials 
     junos_config:
       src: files/admin_user
