@@ -9,6 +9,7 @@
       src: files/syslog_config
       comment: Appropriate Syslog server configured     
       register:task
+      
   - debug:
       var: task
   - name: print success
