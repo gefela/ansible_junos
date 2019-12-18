@@ -18,7 +18,7 @@
       msg: Syslog server check - failed
     when: "{{ task.changed }}"
 
-   - name: Admin credentials 
+  - name: Admin credentials 
     junos_config:
       src: files/admin_user
       comment: admin user created and confirmed 
