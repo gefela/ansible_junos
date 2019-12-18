@@ -8,13 +8,13 @@
     junos_config:
       src: files/syslog_config
       comment: Appropriate Syslog server configured     
+      register:task
   - debug:
-      var: tasks
+      var: task
   - name: print success
     debug:
       msg: Syslog server check - OK
     when: not {{ task.changed }}
-
   - name: print failed
     debug:
       msg: Syslog server check - failed
