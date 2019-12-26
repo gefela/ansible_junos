@@ -1,5 +1,5 @@
 [juniper]
-ansible_host=172.16.203.122
+juniper ansible_host=172.16.203.122
 
 [juniper:vars]
 ansible_user=ec2-user
