@@ -2,6 +2,7 @@
 
 - name: Juniper SRX configuration compliance checks 
   hosts: juniper
+  connection:local
   gather_facts: false
   tasks:
   - name: Syslog server check
