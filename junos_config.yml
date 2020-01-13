@@ -8,9 +8,9 @@
     junos_config:
       src: files/syslog_config
       comment: Appropriate Syslog server configured 
-  - debug:task
-      var:task
-      
+  - debug: task
+    var: task
+    
   - name: Admin credentials 
     junos_config:
       src: files/admin_user
