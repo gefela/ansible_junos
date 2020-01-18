@@ -21,6 +21,7 @@
     debug:
       msg: Syslog server check - failed
     when: "{{ task.changed }}"
+    when: "{{ task.src }}"
     
   - name: Admin credentials 
     junos_config:
