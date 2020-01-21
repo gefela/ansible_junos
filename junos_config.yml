@@ -17,6 +17,7 @@
     debug:
       msg: Syslog server check - OK
     when: not {{ task.changed }}
+    
  
   - name: print failed
     debug:
