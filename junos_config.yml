@@ -10,7 +10,7 @@
       comment: Appropriate Syslog server configured 
     register: junos_output
   - debug:
-      var: junos_output.stdout_lines
+      var: junos_output
   
 
   - name: print success
