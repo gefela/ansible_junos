@@ -8,21 +8,21 @@
     junos_config:
       src: files/syslog_config
       comment: Appropriate Syslog server configured 
-    register: task
+    register: junos_output
   - debug:
-      var: task
+      var: junos_output
   
 
   - name: print success
     debug:
       msg: Syslog server check - OK
-    when: not {{ task.changed }}
+    when: not junos_output.changed
     
  
   - name: print failed
     debug:
       msg: Syslog server check - failed
-    when: "{{ task.changed }}"
+    when: junos_output.changed
     
   - name: Admin credentials 
     junos_config:
