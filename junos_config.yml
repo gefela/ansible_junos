@@ -21,7 +21,6 @@
  
   - name: print failed
     debug:
-      var: junos_output.stdout_lines
       msg: Syslog server check - failed 
      when: junos_output.changed
     
