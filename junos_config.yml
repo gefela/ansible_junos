@@ -14,14 +14,14 @@
   
   - name: print success
     debug:
-      var: junos_output.changed
+      msg: Syslog server check - OK
     when: not junos_output.changed 
      
 
    
   - name: print failed
     debug:
-      var: junos_output.changed
+      msg: Syslog server check - failed
     when: junos_output.changed 
      
     
