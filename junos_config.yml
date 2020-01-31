@@ -16,12 +16,14 @@
     debug:
       msg: Syslog server check - OK
     when: not junos_output.changed 
+     var: junos_output.changed
 
    
   - name: print failed
     debug:
       msg: Syslog server check - failed 
     when: junos_output.changed 
+     var: junos_output.changed
     
   - name: Admin credentials 
     junos_config:
