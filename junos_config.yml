@@ -13,6 +13,7 @@
       var: junos_output
   
   - name: print success
+      src: files/syslog_config
     debug:
       msg: Syslog server check - OK
     when: not junos_output.changed 
@@ -20,6 +21,7 @@
 
    
   - name: print failed
+      src: files/syslog_config
     debug:
       msg: Syslog server check - failed
     when: junos_output.changed 
