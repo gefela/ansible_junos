@@ -10,19 +10,19 @@
       comment: Appropriate Syslog server configured 
     register: junos_output
   - debug:
-      var: junos_output
+      var: junos_output.stdout_lines
   
 
   - name: print success
     debug:
       msg: Syslog server check - OK
-    when: not junos_output.changed
+    when: not junos_output.changed and junos_output.stdout_lines
     
  
   - name: print failed
     debug:
       msg: Syslog server check - failed 
-    when: junos_output.changed
+    when: junos_output.changed and junos_output.stdout_lines
     
   - name: Admin credentials 
     junos_config:
