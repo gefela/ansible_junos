@@ -15,14 +15,14 @@
   - name: print success
     debug:
       var: junos_output.changed
-     when: not junos_output.changed 
+    when: not junos_output.changed 
      
 
    
   - name: print failed
     debug:
       var: junos_output.changed
-     when: junos_output.changed 
+    when: junos_output.changed 
      
     
   - name: Admin credentials 
