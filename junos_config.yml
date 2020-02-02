@@ -15,7 +15,7 @@
   
   - name: print success
     debug:
-register: junos_output
+      msg: Syslog server check - failed
     when: not junos_output.changed 
      
 
@@ -23,7 +23,6 @@ register: junos_output
   - name: print failed
     debug:
       msg: Syslog server check - failed
- register: junos_output
     when: junos_output.changed 
      
     
