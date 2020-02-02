@@ -15,7 +15,7 @@
   
   - name: print success
     debug:
- register: junos_output
+register: junos_output
     when: not junos_output.changed 
      
 
