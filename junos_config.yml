@@ -7,7 +7,7 @@
   - name: Syslog server check
     junos_config:
       src: files/syslog_config
-      src_format: text 
+      src_format: set
       comment: Appropriate Syslog server configured 
     register: junos_output
   - debug:
