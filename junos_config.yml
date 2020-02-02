@@ -15,7 +15,6 @@
   
   - name: print success
     debug:
-      msg: Syslog server check - OK
  register: junos_output
     when: not junos_output.changed 
      
