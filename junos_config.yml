@@ -15,7 +15,7 @@
   
   - name: print success
     debug:
-      msg: Syslog server check - failed
+      msg: Syslog server check - Pass 
     when: not junos_output.changed 
    
   - name: print failed
