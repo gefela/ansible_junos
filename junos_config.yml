@@ -15,12 +15,12 @@
   
   - name: print success
     debug:
-      msg: Syslog server check - Pass({{ junos_output.src }})
+      msg: Syslog server check - Pass({{ junos_output }})
     when: not junos_output.changed 
    
   - name: print failed
     debug:
-      msg: Syslog server check - failed({{ junos_output.src }})
+      msg: Syslog server check - failed({{ junos_output }})
     when: junos_output.changed 
      
     
