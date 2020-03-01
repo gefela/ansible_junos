@@ -10,19 +10,8 @@
       src_format: set
       comment: Appropriate Syslog server configured 
     register: junos_output
-  - debug:
-      var: junos_output
+  - debug: msg="stdout={{junos_output.stdout}}"
       
-  - name: print success
-    debug:
-      msg: Syslog server check - Pass({{ junos_output }})
-    when: not junos_output.changed 
-   
-  - name: print failed
-    debug:
-      msg: Syslog server check - failed({{ junos_output }})
-    when: junos_output.changed 
-  
   
     
   - name: Admin credentials 
