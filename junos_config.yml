@@ -13,16 +13,7 @@
   - debug:
       var: junos_output
   
-  - name: print success
-    debug:
-      msg: Syslog server check - Pass({{ junos_output }})
-    when: not junos_output.changed 
-   
-  - name: print failed
-    debug:
-      msg: Syslog server check - failed({{ junos_output }})
-    when: junos_output.changed 
-     
+  
     
   - name: Admin credentials 
     junos_config:
