@@ -10,17 +10,17 @@
       src_format: set
       comment: Appropriate Syslog server configured 
     register: junos_output
-    debug:
-      var: junos_output
+  - debug:
+       var: junos_output
       
   - name: print success
     debug:
-      msg: Syslog server check - Pass({{ junos_output }})
+      msg: Syslog server check - This check has passed with the following output({{ junos_output }})
     when: not junos_output.changed 
    
   - name: print failed
     debug:
-      msg: Syslog server check - failed({{ junos_output }})
+      msg: Syslog server check - This check has failed with the following output({{ junos_output }})
     when: junos_output.changed 
   
     
