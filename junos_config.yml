@@ -10,6 +10,7 @@
       src_format: set
       comment: Appropriate Syslog server configured 
     register: junos_output
+    - debug:
       var: junos_output
       
   - name: print success
