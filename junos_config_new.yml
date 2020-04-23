@@ -48,7 +48,7 @@
     junos_config:
       src: files/NTP server
       comment: Ensure that correct NTP servers has been configured
-        register: junos_output
+    register: junos_output
   - debug:
        var: junos_output
       
@@ -67,7 +67,7 @@
     junos_config:
       src: files/idle timeout
       comment: Ensure that idle timeout has been confi 
-      register: junos_output
+    register: junos_output
   - debug:
        var: junos_output
       
