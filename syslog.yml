@@ -9,6 +9,7 @@
     junos_config:
       src: files/syslog_config
       comment: syslog config
+      format: set
     register: task
     diff: true
 
