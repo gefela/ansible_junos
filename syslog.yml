@@ -18,9 +18,10 @@
     when: not {{ task.changed }}
 
   - name: print failed
-    debug:
-      msg: "{{ task.diff.prepared }}"
-    when: "{{ task.changed }}"
+    debug: msg: "{{item}}"
+    with_items: "{{ task.diff.prepared.split('\n') }}"
+    when: "{{ task.changed }}" 
+
 
   - copy:
       dest: /tmp/diff
