@@ -19,7 +19,7 @@
 
   - name: print failed
     debug:
-      msg: syslog configuration - failed with {{ task.diff.prepared.split('\n') }}
+      msg: "{{ task.diff.prepared.split('\n') }}"
     when: "{{ task.changed }}"
 
   - copy:
