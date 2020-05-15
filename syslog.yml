@@ -34,5 +34,3 @@
       src: files/admin_user
       comment: admin user config
 
-  - debug:
-      var: task
