@@ -19,7 +19,7 @@
 
   - name: print failed
     debug:
-      msg: "{{ task.diff.prepared.split('\n') }}"
+      msg: "{{ task.diff.prepared }}"
     when: "{{ task.changed }}"
 
   - copy:
