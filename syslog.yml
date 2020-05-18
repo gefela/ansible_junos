@@ -22,7 +22,10 @@
     debug: msg="{{item}}"
     with_items: "{{ task.diff.prepared.split('\n') }}"
     when: "{{ task.changed }}" 
-
+    
+  - name: "Print diff"
+    debug:
+      var: task
 
   - copy:
       dest: /tmp/diff
