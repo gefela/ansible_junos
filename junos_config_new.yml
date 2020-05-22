@@ -11,6 +11,7 @@
       src_format: set
       comment: Ensure that appropriate Syslog server configured 
     register: junos_output
+    diff: true
   - debug:
        var: junos_output
       
