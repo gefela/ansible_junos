@@ -31,6 +31,7 @@
       src: files/admin_user
       comment: Ensure that Admin user havee been created
     register: junos_output
+    diff: true
   - debug:
        var: junos_output
       
@@ -50,6 +51,7 @@
       src: files/NTP server
       comment: Ensure that correct NTP servers has been configured
     register: junos_output
+    diff: true
   - debug:
        var: junos_output
       
@@ -69,6 +71,7 @@
       src: files/idle timeout
       comment: Ensure that idle timeout has been confi 
     register: junos_output
+    diff: true
   - debug:
        var: junos_output
       
