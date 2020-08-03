@@ -16,11 +16,11 @@
        var: junos_output
 
   - debug:
-      msg: Syslog server check - This check has passed with the following output({{ junos_output }})
+      msg: Syslog server check - This check has passed with the following output({{ junos_output.diff.prepared }})
     when: not junos_output.changed 
    
   - debug:
-      msg: Syslog server check - This check has failed with the following output({{ junos_output }})
+      msg: Syslog server check - This check has failed with the following output({{ junos_output.diff.prepared }})
     when: junos_output.changed 
   
     
@@ -33,12 +33,12 @@
   - debug:
        var: junos_output1
   - debug:
-      msg: Admin credentials check - This check has passed with the following output({{ junos_output1 }})
+      msg: Admin credentials check - This check has passed with the following output({{ junos_output1.diff.prepared }})
     when: not junos_output1.changed 
    
   - name: failed
     debug:
-      msg: Admin credentials check - This check has failed with the following output({{ junos_output1 }})
+      msg: Admin credentials check - This check has failed with the following output({{ junos_output1.diff.prepared }})
     when: junos_output1.changed 
       
     
@@ -51,11 +51,11 @@
   - debug:
        var: junos_output2
   - debug:
-      msg: NTP Server check  - This check has passed with the following output({{ junos_output2 }})
+      msg: NTP Server check  - This check has passed with the following output({{ junos_output2.diff.prepared }})
     when: not junos_output.changed 
  
   - debug:
-      msg: NTP Server check  - This check has failed with the following output({{ junos_output2 }})
+      msg: NTP Server check  - This check has failed with the following output({{ junos_output2.diff.prepared }})
     when: junos_output2.changed 
       
       
@@ -69,10 +69,10 @@
        var: junos_output3
       
   - debug:
-      msg: Idle timeout check   - This check has passed with the following output({{ junos_output3 }})
+      msg: Idle timeout check   - This check has passed with the following output({{ junos_output3.diff.prepared }})
     when: not junos_output.changed 
    
   - debug:
-      msg: Idle timeout check   - This check has failed with the following output({{ junos_output3 }})
+      msg: Idle timeout check   - This check has failed with the following output({{ junos_output3.diff.prepared }})
     when: junos_output.changed 
     
