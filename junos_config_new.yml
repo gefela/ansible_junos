@@ -14,14 +14,12 @@
     diff: true
   - debug:
        var: junos_output
-      
-  - name: success
-    debug:
+
+  - debug:
       msg: Syslog server check - This check has passed with the following output({{ junos_output }})
     when: not junos_output.changed 
    
-  - name: failed
-    debug:
+  - debug:
       msg: Syslog server check - This check has failed with the following output({{ junos_output }})
     when: junos_output.changed 
   
@@ -30,20 +28,18 @@
     junos_config:
       src: files/admin_user
       comment: Ensure that Admin user havee been created
-    register: junos_output
+    register: junos_output1
     diff: true
   - debug:
-       var: junos_output
-      
-  - name: success
-    debug:
-      msg: Admin credentials check - This check has passed with the following output({{ junos_output }})
-    when: not junos_output.changed 
+       var: junos_output1
+  - debug:
+      msg: Admin credentials check - This check has passed with the following output({{ junos_output1 }})
+    when: not junos_output1.changed 
    
   - name: failed
     debug:
-      msg: Admin credentials check - This check has failed with the following output({{ junos_output }})
-    when: junos_output.changed 
+      msg: Admin credentials check - This check has failed with the following output({{ junos_output1 }})
+    when: junos_output1.changed 
       
     
   - name: NTP Server check 
@@ -53,17 +49,14 @@
     register: junos_output
     diff: true
   - debug:
-       var: junos_output
-      
-  - name: success
-    debug:
-      msg: NTP Server check  - This check has passed with the following output({{ junos_output }})
+       var: junos_output2
+  - debug:
+      msg: NTP Server check  - This check has passed with the following output({{ junos_output2 }})
     when: not junos_output.changed 
-   
-  - name: failed
-    debug:
-      msg: NTP Server check  - This check has failed with the following output({{ junos_output }})
-    when: junos_output.changed 
+ 
+  - debug:
+      msg: NTP Server check  - This check has failed with the following output({{ junos_output2 }})
+    when: junos_output2.changed 
       
       
   - name: Idle timeout check 
@@ -75,13 +68,11 @@
   - debug:
        var: junos_output
       
-  - name: success
-    debug:
+  - debug:
       msg: Idle timeout check   - This check has passed with the following output({{ junos_output }})
     when: not junos_output.changed 
    
-  - name: failed
-    debug:
+  - debug:
       msg: Idle timeout check   - This check has failed with the following output({{ junos_output }})
     when: junos_output.changed 
     
